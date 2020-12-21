@@ -10,7 +10,7 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     colors: {
-      default: colors.gray,
+      default: colors.coolGray,
       brand: colors.emerald,
       warning: colors.orange,
       success: colors.lime,
