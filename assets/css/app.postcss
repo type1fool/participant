@@ -1,8 +1,17 @@
-/* This file is for your main application css. */
 @import "tailwindcss/base";
+@import "./base/typography.postcss";
+@import "./base/forms.postcss";
+@import "./base/tables.postcss";
+
 @import "tailwindcss/components";
+
 @import "tailwindcss/utilities";
+
 @import "../node_modules/nprogress/nprogress.css";
+
+html {
+  scroll-behavior: smooth;
+}
 
 /* LiveView specific classes for your customizations */
 .phx-no-feedback.invalid-feedback,
