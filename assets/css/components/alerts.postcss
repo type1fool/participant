@@ -1,0 +1,26 @@
+/* Alerts and form errors */
+.alert {
+  @apply p-3 mb-3 rounded shadow-md;
+
+  &:empty {
+    display: none;
+  }
+
+  & p { @apply p-0 m-0; }
+
+  &.alert-info {
+    @apply bg-info-300 text-info-700 dark:bg-info-800 dark:text-info-300;
+  }
+  
+  &.alert-warning {
+    @apply bg-warning-300 text-warning-700 dark:bg-warning-800 dark:text-warning-300;
+  }
+  
+  &.alert-danger {
+    @apply bg-danger-300 text-danger-700 dark:bg-danger-800 dark:text-danger-300;
+  }
+  
+  &.alert-success {
+    @apply bg-success-300 text-success-700 dark:bg-success-800 dark:text-success-300;
+  }
+}
