@@ -18,13 +18,13 @@
             <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
               <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
             <% end %>
+            <%= render "_user_menu_items.html", assigns %>
           </ul>
-          <%= render "_user_menu.html", assigns %>
         </nav>
       </section>
     </header>
-    <div class="p-3">
+    <main role="main" class="container">
       <%= @inner_content %>
-    </div>
+    </main>
   </body>
 </html>
