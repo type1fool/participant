@@ -1,3 +1,11 @@
 form { @apply flex flex-wrap; }
 
 form > *.form-group { @apply flex flex-col space-y-3; }
+
+label { @apply cursor-pointer; }
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+  @apply rounded shadow p-1 bg-gray-100 hover:bg-white focus:bg-white dark:bg-gray-700 hover:bg-gray-800 focus:bg-gray-800 text-current text-opacity-80 hover:text-opacity-100 focus:text-opacity-100 transition duration-150 ease-in-out;
+}
