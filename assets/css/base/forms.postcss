@@ -1,11 +1,23 @@
-form { @apply flex flex-wrap; }
+form { @apply flex flex-col space-y-2; }
 
 form > *.form-group { @apply flex flex-col space-y-3; }
 
-label { @apply cursor-pointer; }
+label { @apply cursor-pointer select-none; }
 
 input:not([type="radio"]):not([type="checkbox"]),
 select,
 textarea {
-  @apply rounded shadow p-1 bg-gray-100 hover:bg-white focus:bg-white dark:bg-gray-700 hover:bg-gray-800 focus:bg-gray-800 text-current text-opacity-80 hover:text-opacity-100 focus:text-opacity-100 transition duration-150 ease-in-out;
+  @apply rounded-sm shadow p-1 border-l-4 border-transparent focus:outline-none bg-gray-100 hover:bg-white focus:bg-white dark:bg-gray-700 dark:hover:bg-gray-900 dark:focus:bg-gray-900 text-gray-900 hover:text-black focus:text-black dark:text-gray-200 dark:hover:text-white dark:focus:text-white text-opacity-80 hover:text-opacity-100 focus:text-opacity-100 transition duration-150 ease-in-out;
+
+  &:valid {
+    @apply border-success-400 dark:border-success-700;
+  }
+
+  &:invalid {
+    @apply border-danger-400 dark:border-danger-700;
+  }
+}
+
+.invalid-feedback {
+  @apply block text-danger-500;
 }
